@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>상품 조회</title>
+</head>
+<body>
+
+<h1>가입 가능 상품 조회</h1>
+
+<input type="number" id="age" placeholder="나이 입력">
+
+<button onclick="checkProduct()">조회</button>
+
+<p id="result"></p>
+
+<script>
+function checkProduct() {
+  const age = Number(document.getElementById("age").value);
+
+  if (age <= 40) {
+    document.getElementById("result").innerText =
+      "30년납 가입 가능";
+  } else if (age <= 60) {
+    document.getElementById("result").innerText =
+      "20년납 가입 가능";
+  } else {
+    document.getElementById("result").innerText =
+      "10년납만 가능";
+  }
+}
+</script>
+
+</body>
+</html>
